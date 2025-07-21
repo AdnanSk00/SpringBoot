@@ -1,0 +1,70 @@
+//package com.tka.p1SpringCRUD;
+//
+//public class C2_EmployeeController {
+//
+//}
+
+
+
+
+
+//package com.tka.First_springBoot_project;
+//
+//import java.util.ArrayList;
+//import java.util.List;
+//
+//import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.web.bind.annotation.PathVariable;
+//import org.springframework.web.bind.annotation.PostMapping;
+//import org.springframework.web.bind.annotation.RequestBody;
+//import org.springframework.web.bind.annotation.RestController;
+//
+////@Controller		// type --> springController - WEB.html or jsp file format
+//
+//@RestController		// type --> Controller - plain text > without.html(.json format) > +json format or Restful API
+//public class C1_MyContrrrroller {
+//	
+////	@GetMapping("/get-Msg-web")	 // end point  | GetMapping --> spring web >
+//	@GetMapping("/")
+//	public String getMsgJava() {
+//		return "Good Morning Adnan!";			// HELLO.html
+//	}
+//	
+//	@PostMapping("/insert-name/{nm}")
+//	public String getMsgJava(@PathVariable String nm) {
+//
+//		System.out.println("S > " + nm);
+//		// insert nm into --> db
+//		return nm;
+//	}
+//
+//	
+//	@GetMapping("/get-emp")	// end point		// GetMapping --> spring web >
+//	public C2_Employee getEmployeeDetails() {
+//		C2_Employee e1 = new C2_Employee();
+//		e1.name = "Shaikh";		
+//		return e1;
+//	}
+//	
+//	@PostMapping("/insert-emp")	// {2, "Sk", 90000}
+//	public C2_Employee getEmployeeDetails(@RequestBody C2_Employee emp) {
+//		System.out.println("emp > " + emp);
+//		return emp;
+//	}
+//	
+//	@GetMapping("/get-emp-list")
+//	public List <C2_Employee> getAllEmployeeList() {
+//		List <C2_Employee> empList = new ArrayList<>();
+//		empList.add(new C2_Employee(2, "MH", 1900));
+//		empList.add(new C2_Employee(3, "GJ", 2400));
+//		empList.add(new C2_Employee(4, "RJ", 1100));
+//		return empList;
+//	}
+//	
+//	@PostMapping("/insert-emp-list")
+//	public List<C2_Employee> getAllEmployeeList(@RequestBody List<C2_Employee> emp) {
+////		List<C2_Employee> emp = new ArrayList<>();
+//		System.out.println(emp);
+//		return emp;
+//	}
+//}

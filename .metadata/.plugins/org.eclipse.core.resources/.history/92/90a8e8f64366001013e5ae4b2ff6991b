@@ -1,0 +1,8 @@
+package com.tka.p3DomoJSP;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class webController {
+	
+}

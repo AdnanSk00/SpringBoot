@@ -1,0 +1,55 @@
+package com.tka.p1SpringCRUD;
+
+//import java.util.ArrayList;
+//import java.util.List;
+//
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.stereotype.Service;
+//
+@Service
+public class C3_EmployeeService {		// core Java
+//	
+//	@Autowired
+//	C4_EmployeeDao dao;
+//	
+//	public void insertEmployee(C1_Employee emp) {
+//
+////		C4_EmployeeDao dao = new C4_EmployeeDao();
+//		dao.insertEmployee(emp);
+//		
+//	}
+//
+//	public C1_Employee getEmployee(int id) {
+//		C1_Employee emp = dao.getEmployee(id);
+//		return emp;
+//	}
+//
+//	public List<C1_Employee> getAllEmployeeList() {
+//		return dao.getAllEmployeeList();
+//	}
+//
+//	public List<C1_Employee> getEmployeeListByRole(String role) {
+//		List<C1_Employee> AllempList = dao.getAllEmployeeList();
+//		List<C1_Employee> roleEmpList = new ArrayList<>();
+//		for(C1_Employee e : AllempList) {
+//			if(e.role.equals(role)){
+//				roleEmpList.add(e);
+//			}
+//		}
+//		return roleEmpList;
+//	}
+//
+//	public void updateEmployeeBySalary(int id, double salary) {
+//		dao.updateEmployeeBySalary(id, salary);
+//	}
+//
+//	public String updateEmployee(int id, C1_Employee emp) {
+//		return dao.updateEmployee(id, emp);
+//	}
+//
+//	
+//	public String deleteEmployeeById(int id) {
+//		return dao.deleteEmployeeById(id);
+//	}
+//
+}

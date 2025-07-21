@@ -1,0 +1,7 @@
+package com.tka.First_SpringBoot_Project;
+
+public class C2_Employee {
+	int id;
+	String name;
+	double salary;
+}

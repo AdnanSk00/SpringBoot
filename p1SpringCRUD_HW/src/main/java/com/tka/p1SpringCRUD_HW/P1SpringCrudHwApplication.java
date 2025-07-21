@@ -1,0 +1,16 @@
+package com.tka.p1SpringCRUD_HW;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+@SpringBootApplication
+@ComponentScan("com")
+public class P1SpringCrudHwApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(P1SpringCrudHwApplication.class, args);
+		System.err.println("*********** WLECOME ONCE AGAIN ************");
+	}
+
+}

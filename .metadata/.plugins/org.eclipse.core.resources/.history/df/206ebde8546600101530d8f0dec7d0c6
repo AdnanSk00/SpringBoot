@@ -1,0 +1,103 @@
+package com.tka.p1SpringCRUD;
+
+//import java.util.List;
+//
+//import org.hibernate.Criteria;
+//import org.hibernate.Query;
+//import org.hibernate.Session;
+//import org.hibernate.SessionFactory;
+//import org.hibernate.Transaction;
+//import org.hibernate.query.NativeQuery;
+////import org.hibernate.criterion.Restrictions;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.stereotype.Repository;
+//
+////import org.springframework.stereotype.Repository;
+//
+////@Component		// parent 
+@Repository			// child - Spring part
+public class C4_EmployeeDao {	// object -- data	(JDBC + Hibernate login)
+//	
+//	@Autowired		// init object by created spring appln
+//	SessionFactory sf;	
+//	
+//	public void insertEmployee(C1_Employee emp) {
+//		
+////		Configuration cfg = new Configuration();
+////		cfg.configure();		// "hibernate.cfg.xml" --> ??
+//		
+//		// SessionFactory --> Session
+//		
+//		// Directly object construct ?? --> Autowired
+//		
+////		System.out.println("sf > " + sf.toString());
+//		System.out.println("sf > " + sf);
+//		Session ssn = sf.openSession();		// ??
+//		ssn.save(emp);
+//		ssn.beginTransaction().commit();
+//		System.out.println("Emp inserted successfully...");
+//	}
+//	
+//	public C1_Employee getEmployee(int id) {
+//		Session ssn = sf.openSession();
+//		C1_Employee emp = ssn.get(C1_Employee.class, id);
+//		System.out.println("emp > " + emp);
+//		return emp;
+//	}
+//
+//	public List<C1_Employee> getAllEmployeeList() {
+//		Session ssn = sf.openSession();
+//		Criteria crt = ssn.createCriteria(C1_Employee.class);
+//		List<C1_Employee> empList = crt.list();
+//		
+//		return empList;
+//	}
+//
+////	public List<C1_Employee> getEmployeeListByRole(String role) {	// escape
+////		Session ssn = sf.openSession();
+////		Criteria crt = ssn.createCriteria(C1_Employee.class);
+////		crt.add(Restrictions.eq("role", role));
+////		List<C1_Employee> empList = crt.list();
+////		return empList;
+////	}
+//	
+////	update employee set salary = 90000 where id = 18;
+//	public void updateEmployeeBySalary(int id, double salary) {
+//		Session ssn = sf.openSession();
+//		Transaction tx = ssn.beginTransaction();
+//		
+////		Query q = ssn.createSQLQuery("update c1_employee set salary = " + salary + " where id = " + id);
+//		String hql = "update C1_Employee set salary = :sal where id = :eid";
+//		Query q = ssn.createQuery(hql);
+//		q.setParameter("sal", salary);
+//		q.setParameter("eid", id);
+//		
+//		int rows = q.executeUpdate();
+//		tx.commit();
+//		System.err.println(rows + " > updated...");
+//	}
+//
+//	public String updateEmployee(int id, C1_Employee emp) {
+//		Session ssn = sf.openSession();
+//		ssn.saveOrUpdate(emp);
+//		ssn.beginTransaction().commit();
+//		System.err.println("Employee saved/updated successfully...");
+//		return "Emp saved/updated successfully...";
+//	}
+//	
+//
+//	public String deleteEmployeeById(int id) {
+//		Session ssn = sf.openSession();
+//		C1_Employee empData = ssn.get(C1_Employee.class, id);
+//		if(empData != null) {
+//			ssn.delete(empData);		
+//			ssn.beginTransaction().commit();
+//			System.err.println("Employee deleted successfully...");
+//			return "Emp deleted successfully...";
+//		} else {
+//			System.err.println("Employee does not exist");
+//			return "Employee does not exist";
+//		}
+//	}
+//
+}

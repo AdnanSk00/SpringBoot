@@ -1,0 +1,10 @@
+package com.tka.p1SpringCRUD_HW;
+
+@RestController
+public class C2_studController {
+	
+	@GetMapping("/")
+	public String m1() {
+		return "CRUD Operations";
+	}
+}

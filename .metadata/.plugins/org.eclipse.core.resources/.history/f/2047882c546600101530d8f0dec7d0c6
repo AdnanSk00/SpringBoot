@@ -1,0 +1,97 @@
+package com.tka.p1SpringCRUD;
+
+//import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+//@Controller		// type --> springController - WEB.html or jsp file format
+@RestController		// type --> Controller - plain text > without.html(.json format) > +json format or Restful API
+public class C2_EmployeeController {		// web --> html/jsp/servlet/tomcat
+	
+	@Autowired
+	C3_EmployeeService empService;
+	
+	@GetMapping("/")
+	public String getMsgJava() {
+		System.out.println("\"/\" Hello");
+		return "Hello";
+	}
+	
+	@PostMapping("/insert-emp")	// {2, "Sk", 90000}
+	public String insertEmployee(@RequestBody C1_Employee emp) {
+		System.out.println("emp > " + emp);
+		// insert --> to DB --> jdbc --> hibernate[**]
+		
+//		C3_EmployeeService empService = new C3_EmployeeService();
+		empService.insertEmployee(emp);
+		
+		return "Emp inserted successfully...";
+	}
+
+	
+	@GetMapping("/get-emp/{id}")	// end point		// GetMapping --> spring web >
+	public C1_Employee getEmployee(@PathVariable int id) {
+		C1_Employee emp = empService.getEmployee(id);
+		return emp;
+	}
+
+	@GetMapping("/get-emp-list")
+	public List <C1_Employee> getAllEmployeeList() {
+		List <C1_Employee> empList = empService.getAllEmployeeList();
+		empList.forEach(System.out::println);
+		return empList;
+	}
+	
+	@GetMapping("/get-emp-list/{role}")
+	public List <C1_Employee> getEmployeeListByRole(@PathVariable String role) {
+		List <C1_Employee> empList = empService.getEmployeeListByRole(role);
+		empList.forEach(System.out::println);
+		return empList;
+	}
+	
+	@PostMapping("/insert-name/{nm}")
+	public String getMsgJava(@PathVariable String nm) {
+
+		System.out.println("S > " + nm);
+		// insert nm into --> db
+		return nm;
+	}
+	
+	@PostMapping("/insert-emp-list")
+	public List<C1_Employee> getAllEmployeeList(@RequestBody List<C1_Employee> emp) {
+//		List<C1_Employee> emp = new ArrayList<>();
+		emp.forEach(System.out::println);
+		return emp;
+	}
+	
+//	@PutMapping("/update-empBysal")		// old method
+//	public void updateEmployeeBySalary(@RequestParam int id, @RequestParam double salary) {
+//		System.err.println("in >  /update-empBysal/{id}/{salary}");
+//		empService.updateEmployeeBySalary(id, salary);
+//	}
+//	@PutMapping("/update-empBysal/{id}/{salary}")	// new method
+//	public void updateEmployeeBySalary(@PathVariable int id, @PathVariable double salary) {
+//		System.err.println("in >  /update-empBysal/{id}/{salary}");
+//		empService.updateEmployeeBySalary(id, salary);
+//	}
+
+	@PutMapping("/update-emp/{id}")
+	public String updateEmployee(@PathVariable int id, @RequestBody C1_Employee emp) {
+		return empService.updateEmployee(id, emp);
+	}
+	
+	@DeleteMapping("/delete-emp/{id}")
+	public String updateEmployeeBySalary(@PathVariable int id) {
+		return empService.deleteEmployeeById(id);
+	}
+	
+}
