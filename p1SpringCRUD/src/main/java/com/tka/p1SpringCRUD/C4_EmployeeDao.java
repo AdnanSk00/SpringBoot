@@ -7,18 +7,20 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.query.NativeQuery;
+//import org.hibernate.query.NativeQuery;
 //import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+//import org.springframework.stereotype.Repository;
+
 //@Component		// parent 
 @Repository			// child - Spring part
 public class C4_EmployeeDao {	// object -- data	(JDBC + Hibernate login)
-//	
+	
 	@Autowired		// init object by created spring appln
 	SessionFactory sf;	
-//	
+	
 	public void insertEmployee(C1_Employee emp) {
 		
 //		Configuration cfg = new Configuration();
@@ -47,16 +49,17 @@ public class C4_EmployeeDao {	// object -- data	(JDBC + Hibernate login)
 		Session ssn = sf.openSession();
 		Criteria crt = ssn.createCriteria(C1_Employee.class);
 		List<C1_Employee> empList = crt.list();
+		
 		return empList;
 	}
 
-	public List<C1_Employee> getEmployeeListByRole(String role) {	// escape
-		Session ssn = sf.openSession();
-		Criteria crt = ssn.createCriteria(C1_Employee.class);
-		crt.add(Restrictions.eq("role", role));
-		List<C1_Employee> empList = crt.list();
-		return empList;
-	}
+//	public List<C1_Employee> getEmployeeListByRole(String role) {	// escape
+//		Session ssn = sf.openSession();
+//		Criteria crt = ssn.createCriteria(C1_Employee.class);
+//		crt.add(Restrictions.eq("role", role));
+//		List<C1_Employee> empList = crt.list();
+//		return empList;
+//	}
 	
 //	update employee set salary = 90000 where id = 18;
 	public void updateEmployeeBySalary(int id, double salary) {
