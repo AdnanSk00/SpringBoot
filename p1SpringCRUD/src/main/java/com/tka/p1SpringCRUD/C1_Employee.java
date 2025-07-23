@@ -5,7 +5,7 @@ import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component		// parent
 @Entity			// table("c1_employee")
 public class C1_Employee {
 	

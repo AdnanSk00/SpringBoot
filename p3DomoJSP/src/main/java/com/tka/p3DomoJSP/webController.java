@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class webController {
 	@GetMapping("/")
 	public String welCome() {
-		return "welcome";
+		return "welcome";		// .jsp file
 	}
 	
 	@GetMapping("/get-indexPage")
@@ -24,7 +24,8 @@ public class webController {
 	
 	@PostMapping("/insert-user")
 	public String m3(@ModelAttribute User user) {
-		System.out.println("User > " + user);
+		System.out.println("in > insertUser()");
+		System.out.println("User obj > " + user);
 		return "home";
 	}
 }
