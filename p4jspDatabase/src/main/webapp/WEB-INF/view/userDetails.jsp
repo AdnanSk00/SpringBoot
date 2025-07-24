@@ -30,7 +30,7 @@
 		out.println("user > " + user);
 		out.println("<br><br>");
 		
-		//out.println("userName > " + user.userName);
+		out.println("userName > " + user.userName);
 	%>
 	
 	<form>
@@ -44,3 +44,21 @@
 	
 </body>
 </html>
+
+<!--
+userDetails.jsp --- .jsp file
+jsp(% %>) + html (form)
+jstl - library of javaScript, we can write jsp data into html as value or object using ${}
+
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

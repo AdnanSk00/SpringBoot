@@ -11,6 +11,11 @@
 <title>All User Data</title>
 </head>
 <body>
+	<%
+		List<User> userList = (List<User>) request.getAttribute("userList");
+		out.println("userList > " + userList);
+		out.println("<br><br>");
+	%>
 	
 	<form>
 		<h3>All User Details :</h3>	

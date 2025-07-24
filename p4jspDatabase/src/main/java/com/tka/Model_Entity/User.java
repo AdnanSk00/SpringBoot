@@ -5,8 +5,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class User {
 	
-	String userName;
-	String password;
+	public String userName;
+	public String password;
 	
 	public User() {
 	}
