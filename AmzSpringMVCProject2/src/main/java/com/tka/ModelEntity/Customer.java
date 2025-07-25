@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 @Entity
 public class Customer {
 	
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int cid;
 	String userName;
 	String pass;

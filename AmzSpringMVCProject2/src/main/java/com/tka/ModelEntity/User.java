@@ -1,6 +1,8 @@
 package com.tka.ModelEntity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
@@ -10,6 +12,7 @@ import org.springframework.stereotype.Component;
 public class User {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	String userName;
 	String pass;
 	
