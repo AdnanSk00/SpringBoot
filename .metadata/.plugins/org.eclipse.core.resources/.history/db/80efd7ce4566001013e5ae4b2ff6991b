@@ -1,4 +1,0 @@
-spring.application.name=p3DomoJSP
-
-spring.mvn.view.prefix=/view/
-spring.mvc.view.suffix=.jsp
